@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+      string menu;
+    char ulang;
+    int total = 0;
+
+    do {
+        cout << "===== MENU MAKANAN =====" << endl;
+        cout << "Pecel = Rp10000" << endl;
+        cout << "Teh   = Rp3000" << endl;
+        cout << "Kopi  = Rp5000" << endl;
+        cout << "Soto  = Rp15000" << endl;
+        cout << "Rawon = Rp20000" << endl;
+
+        cout << "Masukkan nama menu: ";
+        cin >> menu;
+
+        if (menu == "Pecel" || menu == "pecel") {
+            total += 10000;
+        }
+        else if (menu == "Teh" || menu == "teh") {
+            total += 3000;
+        }
+        else if (menu == "Kopi" || menu == "kopi") {
+            total += 5000;
+        }
+        else if (menu == "Soto" || menu == "soto") {
+            total += 15000;
+        }
+        else if (menu == "Rawon" || menu == "rawon") {
+            total += 20000;
+        }
+        else {
+            cout << "Menu tidak tersedia!" << endl;
+        }
+
+        cout << "Total sementara: Rp" << total << endl;
+
+        cout << "Pilih lagi? (Y/y): ";
+        cin >> ulang;
+
+    } while (ulang == 'Y');
+
+    cout << "===== STRUK PEMBAYARAN =====" << endl;
+    cout << "Total pembayaran: Rp" << total << endl;
+    cout << "Terima kasih!" << endl;
+    return 0;
+}
